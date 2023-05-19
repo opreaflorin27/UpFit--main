@@ -84,3 +84,5 @@ C:\UpFit!-main\obj\Debug\UpFit!-main.pdb
 C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.UserTableCreated.resources
 C:\UpFit!-main\obj\Debug\UpFit!-main.csproj.GenerateResource.cache
 C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.AddedLoginRegistration.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.AddedAdminModel.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.AddedAdminModel2.resources

@@ -20,26 +20,12 @@ namespace UpFit__main.Controllers
             return View(db.users.ToList());
         }
 
-        public ActionResult Register()
+
+        public ActionResult AddDetails()
         {
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Register(User account)
-        {
-            if (ModelState.IsValid)
-            {
-                using (CodeFirstDb db = new CodeFirstDb())
-                {
-                    db.users.Add(account);
-                    db.SaveChanges();
-                }
-                ModelState.Clear();
-                ViewBag.Message = account.FirstName + " " + account.LastName + " succesfully registered.";
-            }
-            return View();
-        }
 
         public ActionResult Login()
         {
@@ -51,7 +37,7 @@ namespace UpFit__main.Controllers
         {
             using (CodeFirstDb db = new CodeFirstDb())
             {
-                var usr = db.users.Single(u => u.UserName == user.UserName && u.Password == user.Password);
+                var usr = db.users.SingleOrDefault(u => u.UserName == user.UserName && u.Password == user.Password);
                 if (usr != null)
                 {
                     Session["UserID"] = usr.UserID.ToString();
@@ -97,24 +83,27 @@ namespace UpFit__main.Controllers
             return View(user);
         }
 
-        // GET: Users/Create
-        public ActionResult Create()
+        // GET: Users/Register
+        public ActionResult Register()
         {
             return View();
         }
 
-        // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        public ActionResult ViewAccounts()
+        {
+            return View();
+        }
+
+        // POST: Users/Register
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,SubscriptionTypeFK,UserName,Password,FirstName,LastName,Gender,Age,Height,Weight,KcalDaily")] User user)
+        public ActionResult Register([Bind(Include = "UserID,SubscriptionTypeFK,UserName,Password,FirstName,LastName,Gender,Age,Height,Weight,KcalDaily")] User user)
         {
             if (ModelState.IsValid)
             {
                 db.users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("LoggedIn");
             }
 
             return View(user);

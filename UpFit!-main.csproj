@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -140,7 +141,16 @@
     <Compile Include="Migrations\202305190813158_AddedLoginRegistration.designer.cs">
       <DependentUpon>202305190813158_AddedLoginRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305191042498_AddedAdminModel.cs" />
+    <Compile Include="Migrations\202305191042498_AddedAdminModel.designer.cs">
+      <DependentUpon>202305191042498_AddedAdminModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305191044562_AddedAdminModel2.cs" />
+    <Compile Include="Migrations\202305191044562_AddedAdminModel2.designer.cs">
+      <DependentUpon>202305191044562_AddedAdminModel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\CodeFirstDb.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,15 +206,20 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Register.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Users\LoggedIn.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
-    <Content Include="Views\Users\Register.cshtml" />
-    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Shared\_NavBarBasic.cshtml" />
+    <Content Include="Views\Users\ViewAccounts.cshtml" />
+    <Content Include="Views\Admins\Create.cshtml" />
+    <Content Include="Views\Admins\Delete.cshtml" />
+    <Content Include="Views\Admins\Details.cshtml" />
+    <Content Include="Views\Admins\Edit.cshtml" />
+    <Content Include="Views\Admins\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -242,6 +257,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305190813158_AddedLoginRegistration.resx">
       <DependentUpon>202305190813158_AddedLoginRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305191042498_AddedAdminModel.resx">
+      <DependentUpon>202305191042498_AddedAdminModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305191044562_AddedAdminModel2.resx">
+      <DependentUpon>202305191044562_AddedAdminModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

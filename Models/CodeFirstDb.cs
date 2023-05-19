@@ -9,5 +9,6 @@ namespace UpFit__main.Models
     public class CodeFirstDb : DbContext
     {
         public DbSet<User> users { get; set; }
+        public DbSet<Admin> admins { get; set; }
     }
 }
