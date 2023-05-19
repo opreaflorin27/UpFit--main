@@ -226,6 +226,7 @@
     <Content Include="Views\Admins\ManageUsers.cshtml" />
     <Content Include="Views\Admins\AddUser.cshtml" />
     <Content Include="Views\Admins\DeleteUser.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,8 +1,12 @@
 ﻿@model IEnumerable<UpFit__main.Models.Admin>
-
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
 @{
     ViewBag.Title = "ManageAdmins";
 }
+
+<h2>Manage Admins</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -28,8 +32,6 @@
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.AdminID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.AdminID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.AdminID })
             </td>
         </tr>

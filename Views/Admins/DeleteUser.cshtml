@@ -1,10 +1,12 @@
 ﻿@model UpFit__main.Models.User
-
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
 @{
     ViewBag.Title = "DeleteUser";
 }
 <style>
-    body {
+    main {
         background-image: url("~/Content/poza1.jpg");
         background-size: cover;
     }
@@ -12,7 +14,7 @@
     /* Add additional CSS styles as needed */
 </style>
 
-<body>
+<main>
     <h2>Delete User</h2>
 
     <h3>Are you sure you want to delete this user?</h3>
@@ -110,4 +112,4 @@
             </div>
         }
     </div>
-</body>
+</main>
