@@ -149,9 +149,15 @@
     <Compile Include="Migrations\202305191044562_AddedAdminModel2.designer.cs">
       <DependentUpon>202305191044562_AddedAdminModel2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305211410345_FoodTypesAdded.cs" />
+    <Compile Include="Migrations\202305211410345_FoodTypesAdded.designer.cs">
+      <DependentUpon>202305211410345_FoodTypesAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\CodeFirstDb.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\FoodType.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -230,6 +236,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\FoodType\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -270,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305191044562_AddedAdminModel2.resx">
       <DependentUpon>202305191044562_AddedAdminModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305211410345_FoodTypesAdded.resx">
+      <DependentUpon>202305211410345_FoodTypesAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

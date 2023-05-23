@@ -10,5 +10,6 @@ namespace UpFit__main.Models
     {
         public DbSet<User> users { get; set; }
         public DbSet<Admin> admins { get; set; }
+        public DbSet<FoodType> foodTypes { get; set; }
     }
 }
