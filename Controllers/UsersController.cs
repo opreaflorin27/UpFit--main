@@ -56,12 +56,19 @@ namespace UpFit__main.Controllers
         {
             if (Session["UserID"] != null)
             {
-                return View();
+                int userId = Convert.ToInt32(Session["UserID"]);
+
+                // Retrieve the user from the database based on the UserID
+                User user = db.users.Find(userId);
+
+                if (user != null)
+                {
+                    return View(user);
+                }
             }
-            else
-            {
-                return RedirectToAction("Login");
-            }
+
+            // If the user is not logged in or not found in the database, redirect to the login page
+            return RedirectToAction("Login");
         }
 
         // LoginRegistration
@@ -174,5 +181,7 @@ namespace UpFit__main.Controllers
             }
             base.Dispose(disposing);
         }
+
+
     }
 }

@@ -3,15 +3,18 @@
     ViewBag.Title = "LoggedIn";
 }
 
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.Partial("_NavBarBasic")
-    <div class="d-flex justify-content-center align-items-center flex-column" style="background-color: rgba(255,255,255,0.3); ">
-        <h4>Hello!</h4>
+<div class="d-flex justify-content-center align-items-center flex-column" style="background-color: rgba(255,255,255,0.3); ">
+    <h2>Hello, @Model.FirstName! </h2>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+        @Html.ActionLink("Add Meal", "Create", "Meals", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
 
     </div>
+</div>
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

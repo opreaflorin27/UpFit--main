@@ -1,18 +1,8 @@
 ﻿@model UpFit__main.Models.User
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
-@{
     ViewBag.Title = "DeleteUser";
 }
-<style>
-    main {
-        background-image: url("~/Content/poza1.jpg");
-        background-size: cover;
-    }
-
-    /* Add additional CSS styles as needed */
-</style>
 
 <main>
     <h2>Delete User</h2>
@@ -108,7 +98,7 @@
 
             <div class="form-actions no-color">
                 <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
+                @Html.ActionLink("Back to List", "ManageUsers")
             </div>
         }
     </div>

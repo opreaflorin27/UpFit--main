@@ -10,7 +10,7 @@ namespace UpFit__main.Models
     public class FoodType
     {
         [Key]
-        public int TypeID { get; set; }
+        public int ID_Type { get; set; }
 
         [Required(ErrorMessage = "Name Required")]
         public string Name { get; set; }

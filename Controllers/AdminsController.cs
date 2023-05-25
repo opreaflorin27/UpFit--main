@@ -30,6 +30,16 @@ namespace UpFit__main.Controllers
             return View(db.admins.ToList());
         }
 
+        public ActionResult ManageFoods()
+        {
+            return View(db.foods.ToList());
+        }
+
+        public ActionResult ManageFoodTypes()
+        {
+            return View(db.foodTypes.ToList());
+        }
+
         [HttpPost]
         public ActionResult Login(Admin admin)
         {
@@ -95,7 +105,7 @@ namespace UpFit__main.Controllers
             base.Dispose(disposing);
         }
 
-        //****************************CHAT-GPT****************************************88
+        //****************************EDIT-ADMIN****************************************88
         // GET: Admins/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -190,5 +200,222 @@ namespace UpFit__main.Controllers
             return RedirectToAction("ManageUsers");
         }
 
+        //*****************************************************************************************
+
+
+        // GET: Admins/AddFood
+        public ActionResult CreateFoods()
+        {
+            return View();
+        }
+
+        // POST: Admins/AddFood
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateFoods(Food food)
+        {
+            if (ModelState.IsValid)
+            {
+                db.foods.Add(food);
+                db.SaveChanges();
+                return RedirectToAction("ManageFoods");
+            }
+
+            return View(food);
+        }
+
+        // GET: Admins/EditFood/5
+        public ActionResult EditFoods(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Food food = db.foods.Find(id);
+            if (food == null)
+            {
+                return HttpNotFound();
+            }
+            return View(food);
+        }
+
+        // POST: Admins/EditFood/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditFoods(Food food)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(food).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("ManageFoods");
+            }
+            return View(food);
+        }
+
+        // POST: Admins/DeleteFood/5
+        [HttpPost, ActionName("DeleteFood")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteFoodsConfirmed(int id)
+        {
+            Food food = db.foods.Find(id);
+            db.foods.Remove(food);
+            db.SaveChanges();
+            return RedirectToAction("ManageFoods");
+        }
+
+        // GET: Admins/AddFoodType
+        public ActionResult CreateFoodTypes()
+        {
+            return View();
+        }
+
+        // POST: Admins/AddFoodType
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateFoodTypes(FoodType foodType)
+        {
+            if (ModelState.IsValid)
+            {
+                db.foodTypes.Add(foodType);
+                db.SaveChanges();
+                return RedirectToAction("ManageFoodTypes");
+            }
+
+            return View(foodType);
+        }
+
+        // GET: Admins/EditFoodType/5
+        public ActionResult EditFoodTypes(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            FoodType foodType = db.foodTypes.Find(id);
+            if (foodType == null)
+            {
+                return HttpNotFound();
+            }
+            return View(foodType);
+        }
+
+        // POST: Admins/EditFoodType/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditFoodTypes(FoodType foodType)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(foodType).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("ManageFoodTypes");
+            }
+            return View(foodType);
+        }
+
+        // POST: Admins/DeleteFoodType/5
+        [HttpPost, ActionName("DeleteFoodType")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteFoodTypesConfirmed(int id)
+        {
+            FoodType foodType = db.foodTypes.Find(id);
+            db.foodTypes.Remove(foodType);
+            db.SaveChanges();
+            return RedirectToAction("ManageFoodTypes");
+        }
+
+        // more actions * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+        // GET: Admins/DeleteFood/5
+        public ActionResult DeleteFoods(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Food food = db.foods.Find(id);
+            if (food == null)
+            {
+                return HttpNotFound();
+            }
+            return View(food);
+        }
+
+        // POST: Admins/DeleteFood/5
+        [HttpPost, ActionName("DeleteFood")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteFoodConfirmed(int id)
+        {
+            Food food = db.foods.Find(id);
+            db.foods.Remove(food);
+            db.SaveChanges();
+            return RedirectToAction("ManageFoods");
+        }
+
+        // GET: Admins/DetailsFood/5
+        public ActionResult DetailsFoods(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Food food = db.foods.Find(id);
+            if (food == null)
+            {
+                return HttpNotFound();
+            }
+            return View(food);
+        }
+
+        public ActionResult DetailsUser(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            User user = db.users.Find(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(user);
+        }
+
+
+
+
+        // GET: Admins/DeleteFood/5
+        public ActionResult DeleteFoodTypes(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            FoodType ft = db.foodTypes.Find(id);
+            if (ft == null)
+            {
+                return HttpNotFound();
+            }
+            return View(ft);
+        }
+
+
+        // GET: Admins/DetailsFood/5
+        public ActionResult DetailsFoodTypes(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            FoodType ft = db.foodTypes.Find(id);
+            if (ft == null)
+            {
+                return HttpNotFound();
+            }
+            return View(ft);
+        }
+
     }
+
 }

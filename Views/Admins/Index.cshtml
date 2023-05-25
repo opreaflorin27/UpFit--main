@@ -17,7 +17,9 @@
 
         @Html.ActionLink("Manage Admins", "ManageAdmins", "Admins", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
 
-        @Html.ActionLink("Manage Food", "", "", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
+        @Html.ActionLink("Manage Foods", "ManageFoods", "Admins", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
+
+        @Html.ActionLink("Manage Food Types", "ManageFoodTypes", "Admins", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
 
         @Html.ActionLink("Log Out", "Index", "Home", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
     </div>

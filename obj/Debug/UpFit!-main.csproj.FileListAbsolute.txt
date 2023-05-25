@@ -81,9 +81,10 @@ C:\UpFit!-main\obj\Debug\UpFit!-main.csproj.CoreCompileInputs.cache
 C:\UpFit!-main\obj\Debug\UpFit!-main.csproj.CopyComplete
 C:\UpFit!-main\obj\Debug\UpFit!-main.dll
 C:\UpFit!-main\obj\Debug\UpFit!-main.pdb
-C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.UserTableCreated.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.ADdall.resources
 C:\UpFit!-main\obj\Debug\UpFit!-main.csproj.GenerateResource.cache
-C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.AddedLoginRegistration.resources
-C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.AddedAdminModel.resources
-C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.AddedAdminModel2.resources
-C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.FoodTypesAdded.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations._new.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.Doubletosingle.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.dbl.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.addedmeal.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.addedmeal2.resources

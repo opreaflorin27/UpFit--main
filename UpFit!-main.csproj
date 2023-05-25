@@ -128,33 +128,43 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\FoodsController.cs" />
+    <Compile Include="Controllers\FoodTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MealsController.cs" />
+    <Compile Include="Controllers\MealTypesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202305180915018_UserTableCreated.cs" />
-    <Compile Include="Migrations\202305180915018_UserTableCreated.designer.cs">
-      <DependentUpon>202305180915018_UserTableCreated.cs</DependentUpon>
+    <Compile Include="Migrations\202305241856240_ADdall.cs" />
+    <Compile Include="Migrations\202305241856240_ADdall.designer.cs">
+      <DependentUpon>202305241856240_ADdall.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202305190813158_AddedLoginRegistration.cs" />
-    <Compile Include="Migrations\202305190813158_AddedLoginRegistration.designer.cs">
-      <DependentUpon>202305190813158_AddedLoginRegistration.cs</DependentUpon>
+    <Compile Include="Migrations\202305251029357_new.cs" />
+    <Compile Include="Migrations\202305251029357_new.designer.cs">
+      <DependentUpon>202305251029357_new.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202305191042498_AddedAdminModel.cs" />
-    <Compile Include="Migrations\202305191042498_AddedAdminModel.designer.cs">
-      <DependentUpon>202305191042498_AddedAdminModel.cs</DependentUpon>
+    <Compile Include="Migrations\202305251113375_Doubletosingle.cs" />
+    <Compile Include="Migrations\202305251113375_Doubletosingle.designer.cs">
+      <DependentUpon>202305251113375_Doubletosingle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202305191044562_AddedAdminModel2.cs" />
-    <Compile Include="Migrations\202305191044562_AddedAdminModel2.designer.cs">
-      <DependentUpon>202305191044562_AddedAdminModel2.cs</DependentUpon>
+    <Compile Include="Migrations\202305251128373_dbl.cs" />
+    <Compile Include="Migrations\202305251128373_dbl.designer.cs">
+      <DependentUpon>202305251128373_dbl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202305211410345_FoodTypesAdded.cs" />
-    <Compile Include="Migrations\202305211410345_FoodTypesAdded.designer.cs">
-      <DependentUpon>202305211410345_FoodTypesAdded.cs</DependentUpon>
+    <Compile Include="Migrations\202305251245570_addedmeal.cs" />
+    <Compile Include="Migrations\202305251245570_addedmeal.designer.cs">
+      <DependentUpon>202305251245570_addedmeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305251246528_addedmeal2.cs" />
+    <Compile Include="Migrations\202305251246528_addedmeal2.designer.cs">
+      <DependentUpon>202305251246528_addedmeal2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Meal.cs" />
+    <Compile Include="Models\MealType.cs" />
     <Compile Include="Models\CodeFirstDb.cs" />
     <Compile Include="Models\Food.cs" />
     <Compile Include="Models\FoodType.cs" />
@@ -223,20 +233,43 @@
     <Content Include="Views\Users\ViewAccounts.cshtml" />
     <Content Include="Views\Admins\Create.cshtml" />
     <Content Include="Views\Admins\Delete.cshtml" />
-    <Content Include="Views\Admins\Details.cshtml" />
     <Content Include="Views\Admins\Index.cshtml" />
     <Content Include="Views\Admins\ManageAdmins.cshtml" />
     <Content Include="Views\Admins\Login.cshtml" />
     <Content Include="Views\Shared\_NavBarAdmin.cshtml" />
-    <Content Include="Views\Admins\Edit.cshtml" />
     <Content Include="Views\Admins\ManageUsers.cshtml" />
     <Content Include="Views\Admins\AddUser.cshtml" />
     <Content Include="Views\Admins\DeleteUser.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admins\CreateFoodTypes.cshtml" />
+    <Content Include="Views\Admins\DeleteFoodTypes.cshtml" />
+    <Content Include="Views\Admins\DetailsFoodTypes.cshtml" />
+    <Content Include="Views\Admins\EditFoodTypes.cshtml" />
+    <Content Include="Views\FoodTypes\Index.cshtml" />
+    <Content Include="Views\Admins\CreateFoods.cshtml" />
+    <Content Include="Views\Admins\DeleteFoods.cshtml" />
+    <Content Include="Views\Admins\DetailsFoods.cshtml" />
+    <Content Include="Views\Admins\EditFoods.cshtml" />
+    <Content Include="Views\Foods\Index.cshtml" />
+    <Content Include="Views\Admins\ManageFoodTypes.cshtml" />
+    <Content Include="Views\Admins\ManageFoods.cshtml" />
+    <Content Include="Views\Foods\Delete.cshtml" />
+    <Content Include="Views\Foods\Edit.cshtml" />
+    <Content Include="Views\Foods\Create.cshtml" />
+    <Content Include="Views\MealTypes\Create.cshtml" />
+    <Content Include="Views\MealTypes\Delete.cshtml" />
+    <Content Include="Views\MealTypes\Details.cshtml" />
+    <Content Include="Views\MealTypes\Edit.cshtml" />
+    <Content Include="Views\MealTypes\Index.cshtml" />
+    <Content Include="Views\Meals\Create.cshtml" />
+    <Content Include="Views\Meals\Delete.cshtml" />
+    <Content Include="Views\Meals\Details.cshtml" />
+    <Content Include="Views\Meals\Edit.cshtml" />
+    <Content Include="Views\Meals\Index.cshtml" />
+    <Content Include="Views\Admins\DetailsUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\FoodType\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -266,20 +299,23 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305180915018_UserTableCreated.resx">
-      <DependentUpon>202305180915018_UserTableCreated.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305241856240_ADdall.resx">
+      <DependentUpon>202305241856240_ADdall.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305190813158_AddedLoginRegistration.resx">
-      <DependentUpon>202305190813158_AddedLoginRegistration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305251029357_new.resx">
+      <DependentUpon>202305251029357_new.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305191042498_AddedAdminModel.resx">
-      <DependentUpon>202305191042498_AddedAdminModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305251113375_Doubletosingle.resx">
+      <DependentUpon>202305251113375_Doubletosingle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305191044562_AddedAdminModel2.resx">
-      <DependentUpon>202305191044562_AddedAdminModel2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305251128373_dbl.resx">
+      <DependentUpon>202305251128373_dbl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305211410345_FoodTypesAdded.resx">
-      <DependentUpon>202305211410345_FoodTypesAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305251245570_addedmeal.resx">
+      <DependentUpon>202305251245570_addedmeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305251246528_addedmeal2.resx">
+      <DependentUpon>202305251246528_addedmeal2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

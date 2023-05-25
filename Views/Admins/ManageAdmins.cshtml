@@ -8,9 +8,10 @@
 
 <h2>Manage Admins</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@Html.ActionLink("Back", "Index", "Admins", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
+
+@Html.ActionLink("Create New", "Create", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
+
 <table class="table">
     <tr>
         <th>
@@ -38,3 +39,5 @@
     }
 
 </table>
+
+
