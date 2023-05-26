@@ -161,6 +161,10 @@
     <Compile Include="Migrations\202305251246528_addedmeal2.designer.cs">
       <DependentUpon>202305251246528_addedmeal2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305260649164_databasegeneratedIdentity.cs" />
+    <Compile Include="Migrations\202305260649164_databasegeneratedIdentity.designer.cs">
+      <DependentUpon>202305260649164_databasegeneratedIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Meal.cs" />
@@ -316,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305251246528_addedmeal2.resx">
       <DependentUpon>202305251246528_addedmeal2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305260649164_databasegeneratedIdentity.resx">
+      <DependentUpon>202305260649164_databasegeneratedIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

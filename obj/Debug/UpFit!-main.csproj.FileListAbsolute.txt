@@ -88,3 +88,4 @@ C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.Doubletosingle.resources
 C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.dbl.resources
 C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.addedmeal.resources
 C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.addedmeal2.resources
+C:\UpFit!-main\obj\Debug\UpFit__main.Migrations.databasegeneratedIdentity.resources

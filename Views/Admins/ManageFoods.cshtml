@@ -4,6 +4,8 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+@using UpFit__main.Models;
+
 <h2>Manage Foods</h2>
 
 @Html.ActionLink("Back", "Index", "Admins", new { area = "" }, new { @class = "btn btn-primary btn-custom" })
@@ -23,9 +25,22 @@
 
     @foreach (var item in Model)
     {
+        FoodType foodType = null;
+        foreach (var type in ViewBag.FoodTypes)
+        {
+            if (type.ID_Type == item.type)
+            {
+                foodType = type;
+                break;
+            }
+        }
+
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.type)
+                @if (foodType != null)
+                {
+                    @foodType.Name
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.name)
@@ -36,5 +51,6 @@
             </td>
         </tr>
     }
+
 
 </table>

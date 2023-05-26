@@ -32,7 +32,13 @@ namespace UpFit__main.Controllers
 
         public ActionResult ManageFoods()
         {
-            return View(db.foods.ToList());
+            //return View(db.foods.ToList());
+            IEnumerable<Food> foods = db.foods.ToList();
+            IEnumerable<FoodType> foodTypes = db.foodTypes.ToList();
+
+            ViewBag.FoodTypes = foodTypes;
+
+            return View(foods);
         }
 
         public ActionResult ManageFoodTypes()
@@ -209,20 +215,36 @@ namespace UpFit__main.Controllers
             return View();
         }
 
-        // POST: Admins/AddFood
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CreateFoods(Food food)
         {
             if (ModelState.IsValid)
             {
-                db.foods.Add(food);
-                db.SaveChanges();
-                return RedirectToAction("ManageFoods");
+                // Retrieve the selected food type from the database
+                var foodType = db.foodTypes.FirstOrDefault(ft => ft.ID_Type == food.type);
+                if (foodType != null)
+                {
+                    // Associate the food type with the food entity
+                    food.type = foodType.ID_Type;
+
+                    db.foods.Add(food);
+                    db.SaveChanges();
+                    return RedirectToAction("ManageFoods");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid food type.");
+                }
             }
+
+            // Retrieve the list of food types to display in the view
+            ViewBag.FoodTypes = db.foodTypes.ToList();
 
             return View(food);
         }
+
 
         // GET: Admins/EditFood/5
         public ActionResult EditFoods(int? id)
@@ -270,7 +292,6 @@ namespace UpFit__main.Controllers
             return View();
         }
 
-        // POST: Admins/AddFoodType
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CreateFoodTypes(FoodType foodType)
@@ -284,6 +305,7 @@ namespace UpFit__main.Controllers
 
             return View(foodType);
         }
+
 
         // GET: Admins/EditFoodType/5
         public ActionResult EditFoodTypes(int? id)
