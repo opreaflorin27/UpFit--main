@@ -38,5 +38,7 @@ namespace UpFit__main.Models
         public int Weight { get; set; }
 
         public int KcalDaily { get; set;}
+
+        public double Lifestyle { get; set; }
     }
 }

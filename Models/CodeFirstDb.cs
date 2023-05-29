@@ -14,5 +14,8 @@ namespace UpFit__main.Models
         public DbSet<Food> foods { get; set; }
         public DbSet<MealType> mealTypes { get; set; }
         public DbSet<Meal> meals { get; set; }
+
+        public DbSet<Coach> coaches { get; set; }
+        public DbSet<UploadClass> videos { get; set; }
     }
 }

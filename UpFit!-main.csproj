@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\CoachController.cs" />
     <Compile Include="Controllers\FoodsController.cs" />
     <Compile Include="Controllers\FoodTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -167,11 +168,13 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Coach.cs" />
     <Compile Include="Models\Meal.cs" />
     <Compile Include="Models\MealType.cs" />
     <Compile Include="Models\CodeFirstDb.cs" />
     <Compile Include="Models\Food.cs" />
     <Compile Include="Models\FoodType.cs" />
+    <Compile Include="Models\UploadClass.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -271,9 +274,14 @@
     <Content Include="Views\Meals\Edit.cshtml" />
     <Content Include="Views\Meals\Index.cshtml" />
     <Content Include="Views\Admins\DetailsUser.cshtml" />
+    <Content Include="Views\Coach\Login.cshtml" />
+    <Content Include="Views\Coach\VideoList.cshtml" />
+    <Content Include="Views\Shared\_NavBarPremium.cshtml" />
+    <Content Include="Views\Users\VideoList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="VideoFiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -305,6 +313,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305241856240_ADdall.resx">
       <DependentUpon>202305241856240_ADdall.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305251029357_new.resx">
       <DependentUpon>202305251029357_new.cs</DependentUpon>

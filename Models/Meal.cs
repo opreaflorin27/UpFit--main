@@ -22,5 +22,8 @@ namespace UpFit__main.Models
 
         [Required]
         public int quantity { get; set;}
+
+        [Required]
+        public DateTime date { get; set; }
     }
 }
