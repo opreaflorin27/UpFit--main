@@ -42,6 +42,7 @@ namespace UpFit__main.Controllers
                 {
                     Session["UserID"] = usr.UserID.ToString();
                     Session["UserName"] = usr.UserName.ToString();
+                    Session["SubscriptionType"] = usr.SubscriptionTypeFK.ToString();
                     return RedirectToAction("LoggedIn");
                 }
                 else
@@ -106,6 +107,14 @@ namespace UpFit__main.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register([Bind(Include = "UserID,SubscriptionTypeFK,UserName,Password,FirstName,LastName,Gender,Age,Height,Weight,KcalDaily")] User user)
         {
+            if (user.Gender == "M")
+            {
+                user.KcalDaily = (int)Math.Round(user.Lifestyle * (66 + (13.7 * user.Weight) + (5 * user.Height) - (6.8 * user.Age)));
+            }
+            else
+            {
+                user.KcalDaily = (int)Math.Round(user.Lifestyle * (655 + (9.5 * user.Weight) + (1.8 * user.Height) - (4.7 * user.Age)));
+            }
             if (ModelState.IsValid)
             {
                 db.users.Add(user);
@@ -182,6 +191,23 @@ namespace UpFit__main.Controllers
             base.Dispose(disposing);
         }
 
-
+        [HttpGet]
+        public ActionResult VideoList()
+        {
+            using (CodeFirstDb db = new CodeFirstDb())
+            {
+                List<UploadClass> Videolist = new List<UploadClass>();
+                foreach (UploadClass video in db.videos)
+                {
+                    UploadClass dbVideo = new UploadClass();
+                    {
+                        dbVideo.Vname = video.Vname;
+                        dbVideo.Vpath = video.Vpath.ToString();
+                    };
+                    Videolist.Add(dbVideo);
+                }
+                return View(Videolist);
+            }
+        }
     }
 }
