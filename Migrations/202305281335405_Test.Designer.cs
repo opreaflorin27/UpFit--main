@@ -7,13 +7,13 @@ namespace UpFit__main.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class dbl : IMigrationMetadata
+    public sealed partial class Test : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(dbl));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Test));
         
         string IMigrationMetadata.Id
         {
-            get { return "202305251128373_dbl"; }
+            get { return "202305281335405_Test"; }
         }
         
         string IMigrationMetadata.Source

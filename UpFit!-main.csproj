@@ -137,33 +137,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202305241856240_ADdall.cs" />
-    <Compile Include="Migrations\202305241856240_ADdall.designer.cs">
-      <DependentUpon>202305241856240_ADdall.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305251029357_new.cs" />
-    <Compile Include="Migrations\202305251029357_new.designer.cs">
-      <DependentUpon>202305251029357_new.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305251113375_Doubletosingle.cs" />
-    <Compile Include="Migrations\202305251113375_Doubletosingle.designer.cs">
-      <DependentUpon>202305251113375_Doubletosingle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305251128373_dbl.cs" />
-    <Compile Include="Migrations\202305251128373_dbl.designer.cs">
-      <DependentUpon>202305251128373_dbl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305251245570_addedmeal.cs" />
-    <Compile Include="Migrations\202305251245570_addedmeal.designer.cs">
-      <DependentUpon>202305251245570_addedmeal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305251246528_addedmeal2.cs" />
-    <Compile Include="Migrations\202305251246528_addedmeal2.designer.cs">
-      <DependentUpon>202305251246528_addedmeal2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305260649164_databasegeneratedIdentity.cs" />
-    <Compile Include="Migrations\202305260649164_databasegeneratedIdentity.designer.cs">
-      <DependentUpon>202305260649164_databasegeneratedIdentity.cs</DependentUpon>
+    <Compile Include="Migrations\202305281335405_Test.cs" />
+    <Compile Include="Migrations\202305281335405_Test.designer.cs">
+      <DependentUpon>202305281335405_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -303,26 +279,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305241856240_ADdall.resx">
-      <DependentUpon>202305241856240_ADdall.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305251029357_new.resx">
-      <DependentUpon>202305251029357_new.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305251113375_Doubletosingle.resx">
-      <DependentUpon>202305251113375_Doubletosingle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305251128373_dbl.resx">
-      <DependentUpon>202305251128373_dbl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305251245570_addedmeal.resx">
-      <DependentUpon>202305251245570_addedmeal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305251246528_addedmeal2.resx">
-      <DependentUpon>202305251246528_addedmeal2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305260649164_databasegeneratedIdentity.resx">
-      <DependentUpon>202305260649164_databasegeneratedIdentity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305281335405_Test.resx">
+      <DependentUpon>202305281335405_Test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
